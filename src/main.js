@@ -1,6 +1,6 @@
 import './style.css'
 
-// Explanation 
+// Explanation: 
 // Create a simple calculator using the operators 
 
 document.querySelector('#app').innerHTML = `
@@ -13,6 +13,9 @@ document.querySelector('#app').innerHTML = `
         <input type="text" id="secondNumber" name="inputNumber"><br><br>
         <input type="submit" value="Calculate" id="inptCalculate">
       </fieldset>
+
+      <!--This area is for computed -->
+      <textarea name="computed" id="txtareaComputed" readonly></textarea>
     </form>
   </div>
 `
