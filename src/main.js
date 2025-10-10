@@ -1,4 +1,5 @@
 import './style.css'
+import calculateHandler from './func/calculator.js'
 
 // Explanation: 
 // Create a simple calculator using the operators 
@@ -19,3 +20,8 @@ document.querySelector('#app').innerHTML = `
     </form>
   </div>
 `
+
+const inptCalculate = document.getElementById("inptCalculate");
+inptCalculate.addEventListener("click", () => {
+    calculateHandler()
+})
