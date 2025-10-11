@@ -30,17 +30,6 @@ inptCalculate.addEventListener("click", () => {
 document.getElementById("inptClear").addEventListener("click", () => {
   clearInputs()
 })
+clicked()
 
-
-const firstNumber = document.getElementById("firstNumber");
-const secondNumber = document.getElementById("secondNumber");
-
-[firstNumber, secondNumber].forEach(input => {
-    input.addEventListener("keydown", e => {
-    if(e.key === "Enter"){
-        e.preventDefault()
-          inptCalculate.click();
-        }
-    })
-})
 

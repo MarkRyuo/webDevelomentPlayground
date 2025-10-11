@@ -45,16 +45,15 @@ function calculateHandler() {
 export default calculateHandler ;
 
 export function clicked(){
-    const firstName = document.getElementById("firstName");
-    const secondName = document.getElementById("secondNumber");
+    const firstNumber = document.getElementById("firstNumber");
+    const secondNumber = document.getElementById("secondNumber");
     const inptCalculate = document.getElementById("inptCalculate");
 
-    [firstName, secondName].forEach(input => {
+    [firstNumber, secondNumber].forEach(input => {
         input.addEventListener("keydown", e => {
-            e.preventDefault()
             if(e.key === "Enter"){
+                e.preventDefault()
                 inptCalculate.click();
-                calculateHandler()
             }
         })
     })
