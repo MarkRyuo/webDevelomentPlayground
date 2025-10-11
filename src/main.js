@@ -1,5 +1,5 @@
 import './style.css'
-import calculateHandler from './func/calculator.js'
+import calculateHandler, { clearInputs } from './func/calculator.js'
 
 // Explanation: 
 // Create a simple calculator using the operators 
@@ -12,7 +12,8 @@ document.querySelector('#app').innerHTML = `
         <input type="text" id="firstNumber" name="inputNumber"><br>
         <p><!--This is empty for displaying only--></p>
         <input type="text" id="secondNumber" name="inputNumber"><br><br>
-        <input type="submit" value="Calculate" id="inptCalculate">
+        <input type="button" value="Calculate" id="inptCalculate">
+        <input type="button" value="Clear" id="inptClear">
       </fieldset>
 
       <!--This area is for computed -->
@@ -24,4 +25,8 @@ document.querySelector('#app').innerHTML = `
 const inptCalculate = document.getElementById("inptCalculate");
 inptCalculate.addEventListener("click", () => {
     calculateHandler()
+})
+
+document.getElementById("inptClear").addEventListener("click", () => {
+  clearInputs()
 })
