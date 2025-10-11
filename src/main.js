@@ -1,5 +1,5 @@
 import './style.css'
-import calculateHandler, { clearInputs } from './func/calculator.js'
+import calculateHandler, { clearInputs, clicked } from './func/calculator.js'
 
 // Explanation: 
 // Create a simple calculator using the operators 
@@ -30,3 +30,17 @@ inptCalculate.addEventListener("click", () => {
 document.getElementById("inptClear").addEventListener("click", () => {
   clearInputs()
 })
+
+
+const firstNumber = document.getElementById("firstNumber");
+const secondNumber = document.getElementById("secondNumber");
+
+[firstNumber, secondNumber].forEach(input => {
+    input.addEventListener("keydown", e => {
+    if(e.key === "Enter"){
+        e.preventDefault()
+          inptCalculate.click();
+        }
+    })
+})
+

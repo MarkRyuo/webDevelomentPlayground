@@ -43,3 +43,19 @@ function calculateHandler() {
 }
 
 export default calculateHandler ;
+
+export function clicked(){
+    const firstName = document.getElementById("firstName");
+    const secondName = document.getElementById("secondNumber");
+    const inptCalculate = document.getElementById("inptCalculate");
+
+    [firstName, secondName].forEach(input => {
+        input.addEventListener("keydown", e => {
+            e.preventDefault()
+            if(e.key === "Enter"){
+                inptCalculate.click();
+                calculateHandler()
+            }
+        })
+    })
+}
